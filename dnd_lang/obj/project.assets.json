@@ -1,0 +1,224 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Catharsis.Commons/4.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.2/Catharsis.Commons.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/Catharsis.Commons.dll": {}
+        }
+      },
+      "Newtonsoft.Json/12.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "RestSharp/106.5.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/RestSharp.dll": {}
+        }
+      },
+      "Yandex.Translator/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Catharsis.Commons": "4.0.0",
+          "Newtonsoft.Json": "12.0.1",
+          "RestSharp": "106.5.4"
+        },
+        "compile": {
+          "lib/netcoreapp2.2/Yandex.Translator.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.2/Yandex.Translator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Catharsis.Commons/4.0.0": {
+      "sha512": "n6skaiII228P77qQGEzZWZneQvFl5kZ78qh/CA60hfEOqtA8ClB5sY4eCo4mUQxKTemXiNHsw9eigaPRVkEVXg==",
+      "type": "package",
+      "path": "catharsis.commons/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "catharsis.commons.4.0.0.nupkg.sha512",
+        "catharsis.commons.nuspec",
+        "lib/net452/Catharsis.Commons.XML",
+        "lib/net452/Catharsis.Commons.dll",
+        "lib/net452/Catharsis.Commons.pdb",
+        "lib/net462/Catharsis.Commons.dll",
+        "lib/net462/Catharsis.Commons.pdb",
+        "lib/net462/Catharsis.Commons.xml",
+        "lib/net472/Catharsis.Commons.dll",
+        "lib/net472/Catharsis.Commons.pdb",
+        "lib/net472/Catharsis.Commons.xml",
+        "lib/netcoreapp2.2/Catharsis.Commons.deps.json",
+        "lib/netcoreapp2.2/Catharsis.Commons.dll",
+        "lib/netcoreapp2.2/Catharsis.Commons.pdb",
+        "lib/netcoreapp2.2/Catharsis.Commons.xml",
+        "lib/netstandard2.0/Catharsis.Commons.deps.json",
+        "lib/netstandard2.0/Catharsis.Commons.dll",
+        "lib/netstandard2.0/Catharsis.Commons.pdb",
+        "lib/netstandard2.0/Catharsis.Commons.xml"
+      ]
+    },
+    "Newtonsoft.Json/12.0.1": {
+      "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.pdb",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.pdb",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.pdb",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.pdb",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.pdb",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.pdb",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.pdb",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.pdb",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec"
+      ]
+    },
+    "RestSharp/106.5.4": {
+      "sha512": "AOAzWW/L0YNxOLjc2foBmKFRBGNshfKXlpQrWtX9U5fArZsuiz9o9tb2QsY6uXtMEtRdKJcj3J2Mw4L6UJVaAA==",
+      "type": "package",
+      "path": "restsharp/106.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.5.4.nupkg.sha512",
+        "restsharp.nuspec"
+      ]
+    },
+    "Yandex.Translator/2.0.0": {
+      "sha512": "ASv0Q8irorlb4w2F4LcFfuME/4Za7Hnc7m8avvklMoubqVrR2W3fsjGOwul2T3DtMiltGs8p33zQ4X77CegK+g==",
+      "type": "package",
+      "path": "yandex.translator/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/Yandex.Translator.XML",
+        "lib/net452/Yandex.Translator.dll",
+        "lib/net452/Yandex.Translator.pdb",
+        "lib/net462/Yandex.Translator.XML",
+        "lib/net462/Yandex.Translator.dll",
+        "lib/net462/Yandex.Translator.pdb",
+        "lib/net472/Yandex.Translator.XML",
+        "lib/net472/Yandex.Translator.dll",
+        "lib/net472/Yandex.Translator.pdb",
+        "lib/netcoreapp2.2/Yandex.Translator.deps.json",
+        "lib/netcoreapp2.2/Yandex.Translator.dll",
+        "lib/netcoreapp2.2/Yandex.Translator.pdb",
+        "lib/netcoreapp2.2/Yandex.Translator.xml",
+        "lib/netstandard2.0/Yandex.Translator.deps.json",
+        "lib/netstandard2.0/Yandex.Translator.dll",
+        "lib/netstandard2.0/Yandex.Translator.pdb",
+        "lib/netstandard2.0/Yandex.Translator.xml",
+        "yandex.translator.2.0.0.nupkg.sha512",
+        "yandex.translator.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Yandex.Translator >= 2.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/aleksandrmiroshnikov/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/aleksandrmiroshnikov/RiderProjects/dnd_lang/dnd_lang/dnd_lang.csproj",
+      "projectName": "dnd_lang",
+      "projectPath": "/Users/aleksandrmiroshnikov/RiderProjects/dnd_lang/dnd_lang/dnd_lang.csproj",
+      "packagesPath": "/Users/aleksandrmiroshnikov/.nuget/packages/",
+      "outputPath": "/Users/aleksandrmiroshnikov/RiderProjects/dnd_lang/dnd_lang/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/aleksandrmiroshnikov/.config/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "dependencies": {
+          "Yandex.Translator": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.101/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

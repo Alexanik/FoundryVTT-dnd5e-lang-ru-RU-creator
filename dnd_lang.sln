@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dnd_lang", "dnd_lang\dnd_lang.csproj", "{21C7F7C4-CD46-4983-B5A3-D351C9980747}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21C7F7C4-CD46-4983-B5A3-D351C9980747}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21C7F7C4-CD46-4983-B5A3-D351C9980747}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21C7F7C4-CD46-4983-B5A3-D351C9980747}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21C7F7C4-CD46-4983-B5A3-D351C9980747}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

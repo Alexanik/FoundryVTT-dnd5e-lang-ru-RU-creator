@@ -1,0 +1,65 @@
+{
+	"label": "Classes (SRD)",
+	"entries": [
+		{
+			"id": "Barbarian",
+			"name": "Barbarian",
+			"description": "<p>An unarmoured warrior of great strength fueled, either by rage or their bond with nature.</p>"
+		},
+		{
+			"id": "Bard",
+			"name": "Bard",
+			"description": "<p>A story teller or performer that weaves the threads of magic into their songs and dance.</p>"
+		},
+		{
+			"id": "Cleric",
+			"name": "Cleric",
+			"description": "<p>A chosen champion blessed with strength and magic by their deity, capable of inflicting and curing injuries.</p>"
+		},
+		{
+			"id": "Druid",
+			"name": "Druid",
+			"description": "<p>A magician who wields powers born of nature and the elements, often taking the form of the animals they seek to protect.</p>"
+		},
+		{
+			"id": "Fighter",
+			"name": "Fighter",
+			"description": "<p>Trained in a variety of marital combat, capable of dealing devastating blows and weathering the same.</p>"
+		},
+		{
+			"id": "Monk",
+			"name": "Monk",
+			"description": "<p>Warrior trained in the use of their body as a weapon, capable of harnessing the ki to devastating effect.</p>"
+		},
+		{
+			"id": "Paladin",
+			"name": "Paladin",
+			"description": "<p>A warrior sworn to duty by the oath they swore either to themselves or the god they serve.</p>"
+		},
+		{
+			"id": "Ranger",
+			"name": "Ranger",
+			"description": "<p>A combatant trained in the use of martial weapons and magic, relying on their knowledge of their surroundings they fight in remote areas.</p>"
+		},
+		{
+			"id": "Rogue",
+			"name": "Rogue",
+			"description": "<p>Trained in shadowy skills such as assassination and infiltration, capable of delivering killing blows from the shadows.</p>"
+		},
+		{
+			"id": "Sorcerer",
+			"name": "Sorcerer",
+			"description": "<p>A magic wielder who drawers their power either from their ancestry or the wild magic around them.</p>"
+		},
+		{
+			"id": "Warlock",
+			"name": "Warlock",
+			"description": "<p>Once a mortal, they are now capable of wielding great power gifted to them by a greater power in exchange for their service.</p>"
+		},
+		{
+			"id": "Wizard",
+			"name": "Wizard",
+			"description": "<p>A magic wielder who drawers their power from study and understanding of the arcane, capable of creation and destruction in equal measure.</p>"
+		}
+	]
+}
