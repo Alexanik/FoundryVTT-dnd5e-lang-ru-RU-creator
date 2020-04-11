@@ -80,6 +80,10 @@ namespace dnd_lang
             var if3 = File.ReadAllBytes(@"../../../../in-ru//DnD5e_monsters_BD.dtn");
             var iu3 = new Utf8JsonReader(if3);
             var monstersIn = JsonSerializer.Deserialize<@in.MonsterDB>(ref iu3);
+
+            var if4 = File.ReadAllBytes(@"../../../../in-ru/classfeatures_db.json");
+            var iu4 = new Utf8JsonReader(if4);
+            var classFeaturesIn = JsonSerializer.Deserialize<@in.ClassesDB>(ref iu4);
             
             //---------
 
@@ -94,6 +98,10 @@ namespace dnd_lang
             var of2 = File.ReadAllBytes(@"../../../../out-en/dnd5e.monsters.json");
             var ou2 = new Utf8JsonReader(of2);
             var monsterOut = JsonSerializer.Deserialize<@out.MonsterDB>(ref ou2);
+
+            var of3 = File.ReadAllBytes(@"../../../../out-en/dnd5e.classfeatures.json");
+            var ou3 = new Utf8JsonReader(of3);
+            var classFeaturesOut = JsonSerializer.Deserialize<@out.ClassFeaturesDB>(ref ou3);
             
             //---------
             
@@ -291,13 +299,28 @@ namespace dnd_lang
                     }
                 });
             }
+
+            var classFeaturesDictionary = classFeaturesIn.Page1.Select(x => new Entry
+            {
+                Key = x.id.Trim().ToLower(),
+                Type = Type.ClassFeature,
+                En = new Lang
+                {
+                    Name = x.id.Trim().ToLower()
+                },
+                Ru = new Lang
+                {
+                    Name = x.name,
+                    Description = x.description
+                }
+            }).ToList();
             
             //---------
 
             spellsOut.label = "Заклинания (SRD)";
-            foreach (var spellsOutEntry in spellsOut.entries)
+            foreach (var entry in spellsOut.entries)
             {
-                var id = spellsOutEntry.id.Trim().ToLower();
+                var id = entry.id.Trim().ToLower();
                 var c = FindInDictionary(spellsDictionary, id);
 
                 if (c == null)
@@ -306,20 +329,20 @@ namespace dnd_lang
                 var name = c.Ru.Name;
                 var desciption = c.Ru.Description;
                 
-                spellsOutEntry.name = Regex.Replace(spellsOutEntry.name,
+                entry.name = Regex.Replace(entry.name,
                     $"\\b{c.Key}\\b",
                     name,
                     RegexOptions.IgnoreCase);
 
-                spellsOutEntry.description = !string.IsNullOrEmpty(desciption) ? $"<p>{desciption}</p>" : spellsOutEntry.description;
-                spellsOutEntry.localized = true;
+                entry.description = !string.IsNullOrEmpty(desciption) ? $"<p>{desciption}</p>" : entry.description;
+                entry.localized = true;
             }
             LocalizeEntriesThrowYandex(spellsOut.entries);
 
             itemsOut.label = "Предметы (SRD)";
-            foreach (var itemsOutEntry in itemsOut.entries)
+            foreach (var entry in itemsOut.entries)
             {
-                var id = itemsOutEntry.id.Trim().ToLower();
+                var id = entry.id.Trim().ToLower();
                 var c = FindInDictionary(itemsDictionary, id);
 
                 if (c == null)
@@ -328,22 +351,22 @@ namespace dnd_lang
                 var name = c.Ru.Name;
                 var description = c.Ru.Description;
 
-                itemsOutEntry.name = Regex.Replace(itemsOutEntry.name, 
+                entry.name = Regex.Replace(entry.name, 
                     $"\\b{c.Key}\\b", 
                     name, 
                     RegexOptions.IgnoreCase);
 
                 if (!string.IsNullOrEmpty(description))
-                    itemsOutEntry.description = description;
+                    entry.description = description;
                 
-                itemsOutEntry.localized = true;
+                entry.localized = true;
             }
             LocalizeEntriesThrowYandex(itemsOut.entries);
 
             monsterOut.label = "Бестиарий (SRD)";
-            foreach (var monsterOutEntry in monsterOut.entries)
+            foreach (var entry in monsterOut.entries)
             {
-                var id = monsterOutEntry.id.Trim().ToLower();
+                var id = entry.id.Trim().ToLower();
                 var c = FindInDictionary(monstersDictionary, id);
 
                 if (c == null)
@@ -352,17 +375,41 @@ namespace dnd_lang
                 var name = c.Ru.Name;
                 var description = c.Ru.Description;
 
-                monsterOutEntry.name = Regex.Replace(monsterOutEntry.name,
+                entry.name = Regex.Replace(entry.name,
                     $"\\b{c.Key}\\b",
                     name,
                     RegexOptions.IgnoreCase);
 
                 if (!string.IsNullOrEmpty(description))
-                    monsterOutEntry.description = description;
+                    entry.description = description;
                 
-                monsterOutEntry.localized = true;
+                entry.localized = true;
             }
             LocalizeEntriesThrowYandex(monsterOut.entries);
+
+            classFeaturesOut.label = "Классовый Особенности (SRD)";
+            foreach (var entry in classFeaturesOut.entries)
+            {
+                var id = entry.id.Trim().ToLower();
+                var c = FindInDictionary(classFeaturesDictionary, id);
+                
+                if (c == null)
+                    continue;
+
+                var name = c.Ru.Name;
+                var description = c.Ru.Description;
+                
+                entry.name = Regex.Replace(entry.name,
+                    $"\\b{c.Key}\\b",
+                    name,
+                    RegexOptions.IgnoreCase);
+
+                if (!string.IsNullOrEmpty(description))
+                    entry.description = description;
+                
+                entry.localized = true;
+            }
+            LocalizeEntriesThrowYandex(classFeaturesOut.entries);
             
             //---------
 
@@ -380,6 +427,9 @@ namespace dnd_lang
 
             var lf2 = JsonSerializer.SerializeToUtf8Bytes(monsterOut, serializerOptions);
             File.WriteAllBytes($"{outPath}/dnd5e.monsters.json", lf2);
+
+            var lf3 = JsonSerializer.SerializeToUtf8Bytes(classFeaturesOut, serializerOptions);
+            File.WriteAllBytes($"{outPath}/dnd5e.classfeatures.json", lf3);
         }
     }
 }

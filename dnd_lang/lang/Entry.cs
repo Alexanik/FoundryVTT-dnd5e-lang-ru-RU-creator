@@ -2,7 +2,7 @@ namespace dnd_lang.lang
 {
     public enum Type
     {
-        Spell, Item, Monster
+        Spell, Item, Monster, ClassFeature
     }
     
     public class Entry
